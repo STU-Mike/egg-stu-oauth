@@ -1,7 +1,7 @@
 module.exports = {
   title: 'stu-oauth',
   description: 'stu-oauth后台接口描述',
-  // base: '/vuepress-study/',
+  base: '/stu-oauth',
   themeConfig: {
     sidebar: {
       '/': [
