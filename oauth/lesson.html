@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>stu-oauth</title>
+    <meta name="description" content="stu-oauth后台接口描述">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.26516266.css" as="style"><link rel="preload" href="/assets/js/app.122ff38f.js" as="script"><link rel="preload" href="/assets/js/6.6b1c09ff.js" as="script"><link rel="prefetch" href="/assets/js/10.4abde8b5.js"><link rel="prefetch" href="/assets/js/11.6ded7db1.js"><link rel="prefetch" href="/assets/js/12.a15c98a1.js"><link rel="prefetch" href="/assets/js/2.67226096.js"><link rel="prefetch" href="/assets/js/3.546b4545.js"><link rel="prefetch" href="/assets/js/4.93891ddf.js"><link rel="prefetch" href="/assets/js/5.5aa4f926.js"><link rel="prefetch" href="/assets/js/7.b638fcfb.js"><link rel="prefetch" href="/assets/js/8.3ebbb607.js"><link rel="prefetch" href="/assets/js/9.addcdee6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.26516266.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">stu-oauth</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/" class="nav-link">关于我们</a></div><div class="nav-item"><a href="/" class="nav-link">捐献</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/" class="nav-link">关于我们</a></div><div class="nav-item"><a href="/" class="nav-link">捐献</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/error/" class="sidebar-link">错误码</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>oauth</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/oauth/login.html" class="sidebar-link">用户登陆</a></li><li><a href="/oauth/authorize.html" class="sidebar-link">用户授权</a></li><li><a href="/oauth/token.html" class="sidebar-link">换取凭证</a></li><li><a href="/oauth/refresh_token.html" class="sidebar-link">刷新凭证</a></li><li><a href="/oauth/view.html" class="sidebar-link">静态页面</a></li><li><a href="/oauth/lesson.html" class="active sidebar-link">获取课程</a></li><li><a href="/oauth/user_info.html" class="sidebar-link">获取用户信息</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><p><strong>简要描述：</strong></p> <ul><li>获取用户课程</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/user/lesson</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>GET</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">year</td> <td style="text-align:left">是</td> <td style="text-align:left">int</td> <td>学年</td></tr> <tr><td style="text-align:left">semester</td> <td style="text-align:left">是</td> <td style="text-align:left">int</td> <td>学期</td></tr></tbody></table> <p><strong>注意</strong>：该参数在headers处传入</p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">Authorization</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>传参格式：<code>Bearer </code>，中间用空格隔开，其中AccessToken为访问令牌</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;year&quot;: 2015,
+    &quot;semester&quot;: 1,
+    &quot;lessons&quot;: [
+        {
+            &quot;id&quot;: &quot;79654&quot;,
+            &quot;name&quot;: &quot;[CIS6031A]汕大整合思维&quot;,
+            &quot;teacher&quot;: &quot;Wai-man Kwok/孙金峰/王雨函&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;8&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 16.45,
+                    &quot;day&quot;: 4,
+                    &quot;room&quot;: &quot;讲堂一&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;12&quot;,
+                    &quot;begin_time&quot;: 8,
+                    &quot;end_time&quot;: 9.4,
+                    &quot;day&quot;: 3,
+                    &quot;room&quot;: &quot;D209&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80933&quot;,
+            &quot;name&quot;: &quot;[CST1301A]程序设计基础&quot;,
+            &quot;teacher&quot;: &quot;于津&quot;,
+            &quot;credit&quot;: &quot;4.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;89&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 17.4,
+                    &quot;day&quot;: 1,
+                    &quot;room&quot;: &quot;E201-1&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;67&quot;,
+                    &quot;begin_time&quot;: 14,
+                    &quot;end_time&quot;: 15.4,
+                    &quot;day&quot;: 4,
+                    &quot;room&quot;: &quot;E201-1&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80935&quot;,
+            &quot;name&quot;: &quot;[CST1307A]线性代数&quot;,
+            &quot;teacher&quot;: &quot;廖海泳&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;12&quot;,
+                    &quot;begin_time&quot;: 8,
+                    &quot;end_time&quot;: 9.4,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E309&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80934&quot;,
+            &quot;name&quot;: &quot;[CST1501A]计算科学导论&quot;,
+            &quot;teacher&quot;: &quot;蔡玲如&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;89&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 17.4,
+                    &quot;day&quot;: 5,
+                    &quot;room&quot;: &quot;E208&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;79694&quot;,
+            &quot;name&quot;: &quot;[ELC1]英语(ELC1)&quot;,
+            &quot;teacher&quot;: &quot;卫恩&quot;,
+            &quot;credit&quot;: &quot;4.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;34&quot;,
+                    &quot;begin_time&quot;: 10,
+                    &quot;end_time&quot;: 11.4,
+                    &quot;day&quot;: 3,
+                    &quot;room&quot;: &quot;D206&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;12&quot;,
+                    &quot;begin_time&quot;: 8,
+                    &quot;end_time&quot;: 9.4,
+                    &quot;day&quot;: 5,
+                    &quot;room&quot;: &quot;D206&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80645&quot;,
+            &quot;name&quot;: &quot;[ENC1101A]工程设计导论&quot;,
+            &quot;teacher&quot;: &quot;陆小华&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;双67&quot;,
+                    &quot;begin_time&quot;: 14,
+                    &quot;end_time&quot;: 15.4,
+                    &quot;day&quot;: 1,
+                    &quot;room&quot;: &quot;E301&quot;,
+                    &quot;week&quot;: 43690
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80649&quot;,
+            &quot;name&quot;: &quot;[ENC1102A]化学导论&quot;,
+            &quot;teacher&quot;: &quot;李庚英&quot;,
+            &quot;credit&quot;: &quot;1.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;双67&quot;,
+                    &quot;begin_time&quot;: 14,
+                    &quot;end_time&quot;: 15.4,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E301&quot;,
+                    &quot;week&quot;: 43690
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80652&quot;,
+            &quot;name&quot;: &quot;[ENC1103A]生物学导论&quot;,
+            &quot;teacher&quot;: &quot;游翠红&quot;,
+            &quot;credit&quot;: &quot;1.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;单AB&quot;,
+                    &quot;begin_time&quot;: 19.2,
+                    &quot;end_time&quot;: 21,
+                    &quot;day&quot;: 1,
+                    &quot;room&quot;: &quot;E306&quot;,
+                    &quot;week&quot;: 21845
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80454&quot;,
+            &quot;name&quot;: &quot;[MAT1001A]微积分A-I&quot;,
+            &quot;teacher&quot;: &quot;杨忠强&quot;,
+            &quot;credit&quot;: &quot;4.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;34&quot;,
+                    &quot;begin_time&quot;: 10,
+                    &quot;end_time&quot;: 11.4,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E阶梯教室203&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;34&quot;,
+                    &quot;begin_time&quot;: 10,
+                    &quot;end_time&quot;: 11.4,
+                    &quot;day&quot;: 4,
+                    &quot;room&quot;: &quot;E阶梯教室203&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80283&quot;,
+            &quot;name&quot;: &quot;[SOC6110A]马克思主义基本原理&quot;,
+            &quot;teacher&quot;: &quot;程家明&quot;,
+            &quot;credit&quot;: &quot;3.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;890&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 18.35,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E301&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        }
+    ],
+    &quot;code&quot;: &quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">year</td> <td style="text-align:left">int</td> <td>年份</td></tr> <tr><td style="text-align:left">semester</td> <td style="text-align:left">int</td> <td>学期，0代表春季，1代表秋季</td></tr> <tr><td style="text-align:left">lessons</td> <td style="text-align:left">Array</td> <td>课程信息</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，“0”代表请求正常</td></tr></tbody></table> <p><strong>备注</strong></p> <ul><li>更多返回错误代码请看首页的错误代码描述</li></ul></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/oauth/view.html" class="prev">
+          静态页面
+        </a></span> <span class="next"><a href="/oauth/user_info.html">
+          获取用户信息
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.122ff38f.js" defer></script><script src="/assets/js/6.6b1c09ff.js" defer></script>
+  </body>
+</html>

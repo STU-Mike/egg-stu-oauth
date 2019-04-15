@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>stu-oauth</title>
+    <meta name="description" content="stu-oauth后台接口描述">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.26516266.css" as="style"><link rel="preload" href="/assets/js/app.122ff38f.js" as="script"><link rel="preload" href="/assets/js/8.3ebbb607.js" as="script"><link rel="prefetch" href="/assets/js/10.4abde8b5.js"><link rel="prefetch" href="/assets/js/11.6ded7db1.js"><link rel="prefetch" href="/assets/js/12.a15c98a1.js"><link rel="prefetch" href="/assets/js/2.67226096.js"><link rel="prefetch" href="/assets/js/3.546b4545.js"><link rel="prefetch" href="/assets/js/4.93891ddf.js"><link rel="prefetch" href="/assets/js/5.5aa4f926.js"><link rel="prefetch" href="/assets/js/6.6b1c09ff.js"><link rel="prefetch" href="/assets/js/7.b638fcfb.js"><link rel="prefetch" href="/assets/js/9.addcdee6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.26516266.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">stu-oauth</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/" class="nav-link">关于我们</a></div><div class="nav-item"><a href="/" class="nav-link">捐献</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/" class="nav-link">关于我们</a></div><div class="nav-item"><a href="/" class="nav-link">捐献</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/error/" class="sidebar-link">错误码</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>oauth</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/oauth/login.html" class="sidebar-link">用户登陆</a></li><li><a href="/oauth/authorize.html" class="sidebar-link">用户授权</a></li><li><a href="/oauth/token.html" class="sidebar-link">换取凭证</a></li><li><a href="/oauth/refresh_token.html" class="active sidebar-link">刷新凭证</a></li><li><a href="/oauth/view.html" class="sidebar-link">静态页面</a></li><li><a href="/oauth/lesson.html" class="sidebar-link">获取课程</a></li><li><a href="/oauth/user_info.html" class="sidebar-link">获取用户信息</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><p><strong>简要描述：</strong></p> <ul><li>刷新凭证，使用refresh_token刷新access_token和refresh_token</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/oauth/token</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>POST</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">grant_type</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>固定值&quot;refresh_token&quot;</td></tr> <tr><td style="text-align:left">refresh_token</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>refresh_token，刷新令牌</td></tr> <tr><td style="text-align:left">access_token</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>access_token，访问令牌</td></tr> <tr><td style="text-align:left">client_id</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>客户端ID</td></tr> <tr><td style="text-align:left">client_secret</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>string 客户端秘钥</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;client&quot;: {
+        &quot;id&quot;: &quot;syllabus-app&quot;,
+        &quot;redirectUris&quot;: [
+            &quot;http://no_redirect_uri.com&quot;
+        ],
+        &quot;grants&quot;: [
+            &quot;refresh_token&quot;,
+            &quot;authorization_code&quot;
+        ],
+        &quot;scope&quot;: [
+            &quot;*&quot;
+        ],
+        &quot;banScope&quot;: []
+    },
+    &quot;user&quot;: {
+        &quot;id&quot;: &quot;17jwmai2&quot;,
+        &quot;info&quot;: null,
+        &quot;created_at&quot;: &quot;2019-04-05&quot;,
+        &quot;updated_at&quot;: &quot;2019-04-05&quot;,
+        &quot;grant_type&quot;: &quot;refresh_token&quot;
+    },
+    &quot;accessToken&quot;: &quot;266b472615197c3c099d2c7aa239313d92a5484e&quot;,
+    &quot;accessTokenExpiresAt&quot;: &quot;2019-04-14T03:19:04.289Z&quot;,
+    &quot;refreshToken&quot;: &quot;b251ff67daef71e38a2e7497809b454611886d5e&quot;,
+    &quot;refreshTokenExpiresAt&quot;: &quot;2019-05-14T02:19:04.289Z&quot;,
+    &quot;scope&quot;: &quot;get_syllabus&quot;,
+    &quot;code&quot;: &quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">client</td> <td style="text-align:left">Object</td> <td>客户端信息</td></tr> <tr><td style="text-align:left">user</td> <td style="text-align:left">Object</td> <td>用户信息</td></tr> <tr><td style="text-align:left">accessToken</td> <td style="text-align:left">string</td> <td>accessToken，访问令牌</td></tr> <tr><td style="text-align:left">accessTokenExpiresAt</td> <td style="text-align:left">string</td> <td>accessToken有效期</td></tr> <tr><td style="text-align:left">refreshToken</td> <td style="text-align:left">string</td> <td>refreshToken,刷新令牌</td></tr> <tr><td style="text-align:left">refreshTokenExpiresAt</td> <td style="text-align:left">string</td> <td>refreshToken有效期</td></tr> <tr><td style="text-align:left">scope</td> <td style="text-align:left">string</td> <td>申请的权限范围</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，“0”为请求正常</td></tr></tbody></table> <p><strong>备注</strong></p> <ul><li>更多返回错误代码请看首页的错误代码描述</li></ul></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/oauth/token.html" class="prev">
+          换取凭证
+        </a></span> <span class="next"><a href="/oauth/view.html">
+          静态页面
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.122ff38f.js" defer></script><script src="/assets/js/8.3ebbb607.js" defer></script>
+  </body>
+</html>
