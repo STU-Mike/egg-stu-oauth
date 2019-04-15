@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>接口文档 | stu-oauth</title>
+    <meta name="description" content="课程表开放平台">
+    <link rel="icon" href="/egg-stu-oauth/favicon.jpg">
+    
+    <link rel="preload" href="/egg-stu-oauth/assets/css/0.styles.509056b9.css" as="style"><link rel="preload" href="/egg-stu-oauth/assets/js/app.af67c3c7.js" as="script"><link rel="preload" href="/egg-stu-oauth/assets/js/7.23f4c7b6.js" as="script"><link rel="prefetch" href="/egg-stu-oauth/assets/js/2.566ce1ec.js"><link rel="prefetch" href="/egg-stu-oauth/assets/js/3.def9ae60.js"><link rel="prefetch" href="/egg-stu-oauth/assets/js/4.5371f89c.js"><link rel="prefetch" href="/egg-stu-oauth/assets/js/5.ad7dece3.js"><link rel="prefetch" href="/egg-stu-oauth/assets/js/6.94b303eb.js"><link rel="prefetch" href="/egg-stu-oauth/assets/js/8.dde3f876.js">
+    <link rel="stylesheet" href="/egg-stu-oauth/assets/css/0.styles.509056b9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/egg-stu-oauth/" class="home-link router-link-active"><!----> <span class="site-name">stu-oauth</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/egg-stu-oauth/" class="nav-link">首页</a></div><div class="nav-item"><a href="/egg-stu-oauth/guide/介绍.html" class="nav-link">指南</a></div><div class="nav-item"><a href="/egg-stu-oauth/theory/中间件.html" class="nav-link">框架原理</a></div><div class="nav-item"><a href="https://git.code.tencent.com/stu-syllabus/mini-pro-framework" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/egg-stu-oauth/" class="nav-link">首页</a></div><div class="nav-item"><a href="/egg-stu-oauth/guide/介绍.html" class="nav-link">指南</a></div><div class="nav-item"><a href="/egg-stu-oauth/theory/中间件.html" class="nav-link">框架原理</a></div><div class="nav-item"><a href="https://git.code.tencent.com/stu-syllabus/mini-pro-framework" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/egg-stu-oauth/guide/介绍.html" class="sidebar-link">介绍</a></li><li><a href="/egg-stu-oauth/guide/授权码模式.html" class="sidebar-link">授权码模式</a></li><li><a href="/egg-stu-oauth/guide/刷新凭证.html" class="sidebar-link">刷新凭证</a></li><li><a href="/egg-stu-oauth/guide/接口文档.html" class="active sidebar-link">接口文档</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#用户登录的接口" class="sidebar-link">用户登录的接口</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#用户授权" class="sidebar-link">用户授权</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#换取凭证" class="sidebar-link">换取凭证</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#刷新凭证" class="sidebar-link">刷新凭证</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#静态页面" class="sidebar-link">静态页面</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#获取课程" class="sidebar-link">获取课程</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#获取用户信息" class="sidebar-link">获取用户信息</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#错误码" class="sidebar-link">错误码</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#错误码格式" class="sidebar-link">错误码格式</a></li><li class="sidebar-sub-header"><a href="/egg-stu-oauth/guide/接口文档.html#错误码解释" class="sidebar-link">错误码解释</a></li></ul></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="接口文档"><a href="#接口文档" aria-hidden="true" class="header-anchor">#</a> 接口文档</h1> <h2 id="用户登录的接口"><a href="#用户登录的接口" aria-hidden="true" class="header-anchor">#</a> 用户登录的接口</h2> <p><strong>简要描述：</strong></p> <ul><li>用户登录的接口，该接口为<strong>内部接口</strong>，不应向外暴露</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/oauth/login</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>post</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">是否必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">account</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>用户名</td></tr> <tr><td style="text-align:left">password</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>密码</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;code&quot;:&quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，0为请求正常</td></tr></tbody></table> <p><strong>Session</strong></p> <table><thead><tr><th>参数名</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>user_id</td> <td>string</td> <td>用户id</td></tr></tbody></table> <p><strong>备注</strong></p> <ul><li>无</li></ul> <h2 id="用户授权"><a href="#用户授权" aria-hidden="true" class="header-anchor">#</a> 用户授权</h2> <p><strong>简要描述：</strong></p> <ul><li>用户授权的接口，授权成功后返回authorization_code</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/oauth/authorise</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>get</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">是否必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">response_type</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>授权类型,固定为code</td></tr> <tr><td style="text-align:left">client_id</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>客户端的ID</td></tr> <tr><td style="text-align:left">redirect_uri</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>用户授权成功后重定向的uri</td></tr> <tr><td style="text-align:left">state</td> <td style="text-align:left">可选</td> <td style="text-align:left">string</td> <td>客户端的当前状态，可以指定任意值，认证服务器会原封不动地返回这个值</td></tr> <tr><td style="text-align:left">scope</td> <td style="text-align:left">可选</td> <td style="text-align:left">string</td> <td>申请的权限范围</td></tr></tbody></table> <p><strong>备注</strong></p> <ul><li>重定向到redirect_uri，并带上authorization_code，state值不变</li></ul> <h2 id="换取凭证"><a href="#换取凭证" aria-hidden="true" class="header-anchor">#</a> 换取凭证</h2> <p><strong>简要描述：</strong></p> <ul><li>换取凭证，authorization_code 换取access_token和refresh_token</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/oauth/token</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>POST</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">grant_type</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>固定值“authorization_code ”</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>authorization_code  ，授权码</td></tr> <tr><td style="text-align:left">redirect_uri</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>用户授权成功后重定向的uri</td></tr> <tr><td style="text-align:left">client_id</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>客户端ID</td></tr> <tr><td style="text-align:left">client_secret</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>客户端秘钥</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;client&quot;: {
+        &quot;id&quot;: &quot;syllabus-app&quot;,
+        &quot;redirectUris&quot;: [
+            &quot;http://no_redirect_uri.com&quot;
+        ],
+        &quot;grants&quot;: [
+            &quot;refresh_token&quot;,
+            &quot;authorization_code&quot;
+        ],
+        &quot;scope&quot;: [
+            &quot;*&quot;
+        ],
+        &quot;banScope&quot;: []
+    },
+    &quot;user&quot;: {
+        &quot;id&quot;: &quot;17jwmai2&quot;,
+        &quot;info&quot;: null
+    },
+    &quot;accessToken&quot;: &quot;3382d08b7d365f655f81d5fb98aff4066868ad10&quot;,
+    &quot;accessTokenExpiresAt&quot;: &quot;2019-04-14T02:49:44.538Z&quot;,
+    &quot;refreshToken&quot;: &quot;b55aba5bb1255a63907bc0db30cf2a133658c852&quot;,
+    &quot;refreshTokenExpiresAt&quot;: &quot;2019-05-13T06:25:29.000Z&quot;,
+    &quot;scope&quot;: &quot;get_syllabus&quot;,
+    &quot;code&quot;: &quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">client</td> <td style="text-align:left">Object</td> <td>客户端信息</td></tr> <tr><td style="text-align:left">user</td> <td style="text-align:left">Object</td> <td>用户信息</td></tr> <tr><td style="text-align:left">accessToken</td> <td style="text-align:left">string</td> <td>accessToken，访问令牌</td></tr> <tr><td style="text-align:left">accessTokenExpiresAt</td> <td style="text-align:left">string</td> <td>accessToken有效期</td></tr> <tr><td style="text-align:left">refreshToken</td> <td style="text-align:left">string</td> <td>refreshToken,刷新令牌</td></tr> <tr><td style="text-align:left">refreshTokenExpiresAt</td> <td style="text-align:left">string</td> <td>refreshToken有效期</td></tr> <tr><td style="text-align:left">scope</td> <td style="text-align:left">string</td> <td>申请的权限范围</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，0为请求正常</td></tr></tbody></table> <p><strong>备注</strong></p> <ul><li>更多返回错误代码请看首页的错误代码描述</li></ul> <h2 id="刷新凭证"><a href="#刷新凭证" aria-hidden="true" class="header-anchor">#</a> 刷新凭证</h2> <p><strong>简要描述：</strong></p> <ul><li>刷新凭证，使用refresh_token刷新access_token和refresh_token</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/oauth/token</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>POST</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">grant_type</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>固定值&quot;refresh_token&quot;</td></tr> <tr><td style="text-align:left">refresh_token</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>refresh_token，刷新令牌</td></tr> <tr><td style="text-align:left">access_token</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>access_token，访问令牌</td></tr> <tr><td style="text-align:left">client_id</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>客户端ID</td></tr> <tr><td style="text-align:left">client_secret</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>string 客户端秘钥</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;client&quot;: {
+        &quot;id&quot;: &quot;syllabus-app&quot;,
+        &quot;redirectUris&quot;: [
+            &quot;http://no_redirect_uri.com&quot;
+        ],
+        &quot;grants&quot;: [
+            &quot;refresh_token&quot;,
+            &quot;authorization_code&quot;
+        ],
+        &quot;scope&quot;: [
+            &quot;*&quot;
+        ],
+        &quot;banScope&quot;: []
+    },
+    &quot;user&quot;: {
+        &quot;id&quot;: &quot;17jwmai2&quot;,
+        &quot;info&quot;: null,
+        &quot;created_at&quot;: &quot;2019-04-05&quot;,
+        &quot;updated_at&quot;: &quot;2019-04-05&quot;,
+        &quot;grant_type&quot;: &quot;refresh_token&quot;
+    },
+    &quot;accessToken&quot;: &quot;266b472615197c3c099d2c7aa239313d92a5484e&quot;,
+    &quot;accessTokenExpiresAt&quot;: &quot;2019-04-14T03:19:04.289Z&quot;,
+    &quot;refreshToken&quot;: &quot;b251ff67daef71e38a2e7497809b454611886d5e&quot;,
+    &quot;refreshTokenExpiresAt&quot;: &quot;2019-05-14T02:19:04.289Z&quot;,
+    &quot;scope&quot;: &quot;get_syllabus&quot;,
+    &quot;code&quot;: &quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">client</td> <td style="text-align:left">Object</td> <td>客户端信息</td></tr> <tr><td style="text-align:left">user</td> <td style="text-align:left">Object</td> <td>用户信息</td></tr> <tr><td style="text-align:left">accessToken</td> <td style="text-align:left">string</td> <td>accessToken，访问令牌</td></tr> <tr><td style="text-align:left">accessTokenExpiresAt</td> <td style="text-align:left">string</td> <td>accessToken有效期</td></tr> <tr><td style="text-align:left">refreshToken</td> <td style="text-align:left">string</td> <td>refreshToken,刷新令牌</td></tr> <tr><td style="text-align:left">refreshTokenExpiresAt</td> <td style="text-align:left">string</td> <td>refreshToken有效期</td></tr> <tr><td style="text-align:left">scope</td> <td style="text-align:left">string</td> <td>申请的权限范围</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，0为请求正常</td></tr></tbody></table> <p><strong>备注</strong></p> <h2 id="静态页面"><a href="#静态页面" aria-hidden="true" class="header-anchor">#</a> 静态页面</h2> <p><strong>简要描述：</strong></p> <ul><li>访问指定的静态页面</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/view/&lt;view-name&gt;</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>GET</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">view-name</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>页面名字，静态页面放在/app/view目录下,暂时有 authorise、callback-app、login 这几个页面</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code> &lt;!--汕头大学校园网账号登录界面--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Login&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+登录
+
+        &lt;div&gt;账号：
+            &lt;input type=&quot;text&quot; id=&quot;account&quot;&gt;
+        &lt;/div&gt;
+        &lt;div&gt;密码：
+            &lt;input type=&quot;password&quot; id=&quot;password&quot;&gt;
+        &lt;/div&gt;
+        &lt;button id=&quot;login&quot;&gt;登录&lt;/button&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+&lt;script&gt;
+    let button = document.getElementById('login')
+    // console.log(window.location.search);
+
+
+    button.onclick = () =&gt; {
+        // 登录，验证密码正确性
+        let user_id = 123
+        let account = document.getElementById(&quot;account&quot;).value,
+            password = document.getElementById(&quot;password&quot;).value
+        console.log(account)
+        ajaxPost('/oauth/login','account='+account+'&amp;password='+password,(responseText)=&gt;{
+            console.log(responseText)
+            responseText=JSON.parse(responseText)
+            if(responseText.code === '0'){
+                window.location.href = '/view/authorise' + window.location.search
+            }
+        })
+        // ajax 对象
+        function ajaxObject() {
+            var xmlHttp;
+            try {
+                // Firefox, Opera 8.0+, Safari
+                xmlHttp = new XMLHttpRequest();
+            }
+            catch (e) {
+                // Internet Explorer
+                try {
+                    xmlHttp = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+                } catch (e) {
+                    try {
+                        xmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+                    } catch (e) {
+                        alert(&quot;您的浏览器不支持AJAX！&quot;);
+                        return false;
+                    }
+                }
+            }
+            return xmlHttp;
+        }
+
+        // ajax post请求：
+        function ajaxPost(url, data, fnSucceed, fnFail, fnLoading) {
+            var ajax = ajaxObject();
+            ajax.open(&quot;post&quot;, url, true);
+            ajax.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState === 4) {
+                    if (ajax.status === 200) {
+                        fnSucceed(ajax.responseText);
+                    }
+                    else {
+                        fnFail(&quot;HTTP请求错误！错误码：&quot; + ajax.status);
+                    }
+                }
+            }
+            ajax.send(data);
+
+        }
+    }
+&lt;/script&gt;
+</code></pre></div><p><strong>返回参数说明</strong>
+静态页面</p> <p><strong>备注</strong></p> <h2 id="获取课程"><a href="#获取课程" aria-hidden="true" class="header-anchor">#</a> 获取课程</h2> <p><strong>简要描述：</strong></p> <ul><li>获取用户课程</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/user/lesson</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>GET</li></ul> <p><strong>参数：</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">year</td> <td style="text-align:left">必选</td> <td style="text-align:left">int</td> <td>学年</td></tr> <tr><td style="text-align:left">semester</td> <td style="text-align:left">必选</td> <td style="text-align:left">int</td> <td>学期</td></tr></tbody></table> <p><strong>注意</strong>：该参数在headers处传入</p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">Authorization</td> <td style="text-align:left">是</td> <td style="text-align:left">string</td> <td>传参格式：<code>Bearer </code>，中间用空格隔开，其中AccessToken为访问令牌</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;year&quot;: 2015,
+    &quot;semester&quot;: 1,
+    &quot;lessons&quot;: [
+        {
+            &quot;id&quot;: &quot;79654&quot;,
+            &quot;name&quot;: &quot;[CIS6031A]汕大整合思维&quot;,
+            &quot;teacher&quot;: &quot;Wai-man Kwok/孙金峰/王雨函&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;8&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 16.45,
+                    &quot;day&quot;: 4,
+                    &quot;room&quot;: &quot;讲堂一&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;12&quot;,
+                    &quot;begin_time&quot;: 8,
+                    &quot;end_time&quot;: 9.4,
+                    &quot;day&quot;: 3,
+                    &quot;room&quot;: &quot;D209&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80933&quot;,
+            &quot;name&quot;: &quot;[CST1301A]程序设计基础&quot;,
+            &quot;teacher&quot;: &quot;于津&quot;,
+            &quot;credit&quot;: &quot;4.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;89&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 17.4,
+                    &quot;day&quot;: 1,
+                    &quot;room&quot;: &quot;E201-1&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;67&quot;,
+                    &quot;begin_time&quot;: 14,
+                    &quot;end_time&quot;: 15.4,
+                    &quot;day&quot;: 4,
+                    &quot;room&quot;: &quot;E201-1&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80935&quot;,
+            &quot;name&quot;: &quot;[CST1307A]线性代数&quot;,
+            &quot;teacher&quot;: &quot;廖海泳&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;12&quot;,
+                    &quot;begin_time&quot;: 8,
+                    &quot;end_time&quot;: 9.4,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E309&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80934&quot;,
+            &quot;name&quot;: &quot;[CST1501A]计算科学导论&quot;,
+            &quot;teacher&quot;: &quot;蔡玲如&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;89&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 17.4,
+                    &quot;day&quot;: 5,
+                    &quot;room&quot;: &quot;E208&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;79694&quot;,
+            &quot;name&quot;: &quot;[ELC1]英语(ELC1)&quot;,
+            &quot;teacher&quot;: &quot;卫恩&quot;,
+            &quot;credit&quot;: &quot;4.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;34&quot;,
+                    &quot;begin_time&quot;: 10,
+                    &quot;end_time&quot;: 11.4,
+                    &quot;day&quot;: 3,
+                    &quot;room&quot;: &quot;D206&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;12&quot;,
+                    &quot;begin_time&quot;: 8,
+                    &quot;end_time&quot;: 9.4,
+                    &quot;day&quot;: 5,
+                    &quot;room&quot;: &quot;D206&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80645&quot;,
+            &quot;name&quot;: &quot;[ENC1101A]工程设计导论&quot;,
+            &quot;teacher&quot;: &quot;陆小华&quot;,
+            &quot;credit&quot;: &quot;2.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;双67&quot;,
+                    &quot;begin_time&quot;: 14,
+                    &quot;end_time&quot;: 15.4,
+                    &quot;day&quot;: 1,
+                    &quot;room&quot;: &quot;E301&quot;,
+                    &quot;week&quot;: 43690
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80649&quot;,
+            &quot;name&quot;: &quot;[ENC1102A]化学导论&quot;,
+            &quot;teacher&quot;: &quot;李庚英&quot;,
+            &quot;credit&quot;: &quot;1.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;双67&quot;,
+                    &quot;begin_time&quot;: 14,
+                    &quot;end_time&quot;: 15.4,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E301&quot;,
+                    &quot;week&quot;: 43690
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80652&quot;,
+            &quot;name&quot;: &quot;[ENC1103A]生物学导论&quot;,
+            &quot;teacher&quot;: &quot;游翠红&quot;,
+            &quot;credit&quot;: &quot;1.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;单AB&quot;,
+                    &quot;begin_time&quot;: 19.2,
+                    &quot;end_time&quot;: 21,
+                    &quot;day&quot;: 1,
+                    &quot;room&quot;: &quot;E306&quot;,
+                    &quot;week&quot;: 21845
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80454&quot;,
+            &quot;name&quot;: &quot;[MAT1001A]微积分A-I&quot;,
+            &quot;teacher&quot;: &quot;杨忠强&quot;,
+            &quot;credit&quot;: &quot;4.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;34&quot;,
+                    &quot;begin_time&quot;: 10,
+                    &quot;end_time&quot;: 11.4,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E阶梯教室203&quot;,
+                    &quot;week&quot;: 65535
+                },
+                {
+                    &quot;time&quot;: &quot;34&quot;,
+                    &quot;begin_time&quot;: 10,
+                    &quot;end_time&quot;: 11.4,
+                    &quot;day&quot;: 4,
+                    &quot;room&quot;: &quot;E阶梯教室203&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;80283&quot;,
+            &quot;name&quot;: &quot;[SOC6110A]马克思主义基本原理&quot;,
+            &quot;teacher&quot;: &quot;程家明&quot;,
+            &quot;credit&quot;: &quot;3.0&quot;,
+            &quot;schedule&quot;: [
+                {
+                    &quot;time&quot;: &quot;890&quot;,
+                    &quot;begin_time&quot;: 16,
+                    &quot;end_time&quot;: 18.35,
+                    &quot;day&quot;: 2,
+                    &quot;room&quot;: &quot;E301&quot;,
+                    &quot;week&quot;: 65535
+                }
+            ]
+        }
+    ],
+    &quot;code&quot;: &quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">year</td> <td style="text-align:left">int</td> <td>年份</td></tr> <tr><td style="text-align:left">semester</td> <td style="text-align:left">int</td> <td>学期</td></tr> <tr><td style="text-align:left">lessons</td> <td style="text-align:left">Array</td> <td>课程信息</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，0代表请求正常</td></tr></tbody></table> <p><strong>备注</strong></p> <h2 id="获取用户信息"><a href="#获取用户信息" aria-hidden="true" class="header-anchor">#</a> 获取用户信息</h2> <p><strong>简要描述：</strong></p> <ul><li>获取用户信息，登陆后获取用户信息</li></ul> <p><strong>请求URL：</strong></p> <ul><li><code>/user/info</code></li></ul> <p><strong>请求方式：</strong></p> <ul><li>GET</li></ul> <p><strong>参数：</strong></p> <p><strong>注意</strong>：该参数在headers处传入</p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">必选</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">Authorization</td> <td style="text-align:left">必选</td> <td style="text-align:left">string</td> <td>传参格式：<code>Bearer </code>，中间用空格隔开，其中AccessToken为访问令牌</td></tr></tbody></table> <p><strong>返回示例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;user&quot;: {
+        &quot;id&quot;: &quot;15cthuang&quot;,
+        &quot;info&quot;: {
+            &quot;name&quot;: &quot;黄村堂&quot;,
+            &quot;student_num&quot;: &quot;2015101054&quot;,
+            &quot;sex&quot;: &quot;男&quot;,
+            &quot;education_level&quot;: &quot;本科&quot;,
+            &quot;education_year&quot;: &quot;4&quot;,
+            &quot;enrollment&quot;: &quot;2015&quot;,
+            &quot;education_type&quot;: &quot;理科&quot;,
+            &quot;college&quot;: &quot;工学院&quot;,
+            &quot;dorm&quot;: &quot;思源书院&quot;,
+            &quot;dorm_num&quot;: &quot;302&quot;,
+            &quot;state&quot;: &quot;当前在校生&quot;,
+            &quot;from&quot;: &quot;广东省新会市&quot;
+        }
+    },
+    &quot;code&quot;: &quot;0&quot;
+}
+</code></pre></div><p><strong>返回参数说明</strong></p> <table><thead><tr><th style="text-align:left">参数名</th> <th style="text-align:left">类型</th> <th>说明</th></tr></thead> <tbody><tr><td style="text-align:left">user</td> <td style="text-align:left">Object</td> <td>用户信息</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">string</td> <td>错误码，0为请求正常</td></tr></tbody></table> <p><strong>备注</strong></p> <h2 id="错误码"><a href="#错误码" aria-hidden="true" class="header-anchor">#</a> 错误码</h2> <h3 id="错误码格式"><a href="#错误码格式" aria-hidden="true" class="header-anchor">#</a> <strong>错误码格式</strong></h3> <p>8位/6位数字
+例子：01200104</p> <h3 id="错误码解释"><a href="#错误码解释" aria-hidden="true" class="header-anchor">#</a> <strong>错误码解释</strong></h3> <table><thead><tr><th>错误码</th> <th>解析</th></tr></thead> <tbody><tr><td>01000</td> <td>该错误未登记</td></tr> <tr><td>01200101</td> <td>网络错误</td></tr> <tr><td>01200102</td> <td>密码错误</td></tr> <tr><td>01200103</td> <td>授权码错误</td></tr> <tr><td>01200104</td> <td>令牌错误</td></tr> <tr><td>01200105</td> <td>登录状态无效</td></tr> <tr><td>01200201</td> <td>更新用户信息失败</td></tr></tbody></table></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">4/9/2019, 11:39:51 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/egg-stu-oauth/assets/js/app.af67c3c7.js" defer></script><script src="/egg-stu-oauth/assets/js/7.23f4c7b6.js" defer></script>
+  </body>
+</html>
